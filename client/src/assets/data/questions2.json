@@ -194,697 +194,685 @@
     ],
     "phase2": [
       {
-        "NetworkSecurity": {
-          "Advanced": {
-            "conditions": {
-              "AND": [
-                { "NS1": "Next-generation firewall with advanced features" },
-                { "NS2": "As soon as patches are available" },
-                { "NS3": "Micro-segmentation" }
-              ]
-            },
-            "questions": [
-              {
-                "id": "NS2.1",
-                "question": "How do you manage the integration between your next-generation firewall and other security tools?",
-                "options": [
-                  "No integration",
-                  "Basic log forwarding",
-                  "API-based integration with SIEM",
-                  "Full security orchestration with SOAR platform"
-                ]
-              },
-              {
-                "id": "NS2.2",
-                "question": "How do you handle encrypted traffic inspection?",
-                "options": [
-                  "No inspection of encrypted traffic",
-                  "Selective decryption based on source/destination",
-                  "Full SSL/TLS inspection with certificate management",
-                  "AI-powered encrypted traffic analysis without decryption"
-                ]
-              },
-              {
-                "id": "NS2.3",
-                "question": "How do you manage micro-segmentation in your network?",
-                "options": [
-                  "Basic VLAN segmentation",
-                  "Software-defined networking (SDN) for segmentation",
-                  "Identity-based micro-segmentation",
-                  "AI-driven dynamic micro-segmentation"
-                ]
-              }
-            ]
-          },
-          "Basic": {
-            "conditions": {
-              "OR": [{ "NS1": "Basic network firewall only" }, { "NS2": "Monthly" }, { "NS3": "Basic VLAN separation" }]
-            },
-            "questions": [
-              {
-                "id": "NS2.4",
-                "question": "What plans do you have to upgrade your current firewall infrastructure?",
-                "options": [
-                  "No current plans",
-                  "Evaluating next-gen firewalls",
-                  "Planning implementation within 6 months",
-                  "Currently in the process of upgrading"
-                ]
-              },
-              {
-                "id": "NS2.5",
-                "question": "How do you currently monitor and respond to potential network intrusions?",
-                "options": [
-                  "No specific monitoring",
-                  "Basic log review",
-                  "24/7 SOC monitoring",
-                  "Automated intrusion detection and response"
-                ]
-              }
-            ]
-          }
-        },
-        "DataProtection": {
-          "AdvancedEncryption": {
-            "conditions": {
-              "AND": [{ "DP1": "Encryption both at rest and in transit" }, { "DP2": "Multi-level classification" }]
-            },
-            "questions": [
-              {
-                "id": "DP2.1",
-                "question": "How do you manage encryption for data in use (e.g., in memory, during processing)?",
-                "options": [
-                  "No encryption for data in use",
-                  "Limited use of homomorphic encryption",
-                  "Extensive use of secure enclaves or confidential computing",
-                  "Advanced multi-party computation techniques"
-                ]
-              },
-              {
-                "id": "DP2.2",
-                "question": "How do you handle key rotation and management across your infrastructure?",
-                "options": [
-                  "Manual key rotation",
-                  "Automated key rotation for some systems",
-                  "Comprehensive key lifecycle management",
-                  "Quantum-safe key management and distribution"
-                ]
-              }
-            ]
-          },
-          "BasicEncryption": {
-            "conditions": {
-              "OR": [
-                { "DP1": "Encryption at rest only" },
-                { "DP1": "Encryption in transit only" },
-                { "DP2": "Basic classification (public/private)" }
-              ]
-            },
-            "questions": [
-              {
-                "id": "DP2.3",
-                "question": "What challenges are you facing in implementing comprehensive data encryption?",
-                "options": [
-                  "Lack of expertise",
-                  "Budget constraints",
-                  "Performance concerns",
-                  "Legacy system compatibility issues"
-                ]
-              },
-              {
-                "id": "DP2.4",
-                "question": "How do you plan to enhance your data protection measures in the next 12 months?",
-                "options": [
-                  "No specific plans",
-                  "Implementing encryption at rest",
-                  "Implementing encryption in transit",
-                  "Comprehensive data protection review and enhancement"
-                ]
-              }
-            ]
-          }
-        },
-        "IncidentResponse": {
-          "ComprehensivePlan": {
-            "conditions": {
-              "AND": [
-                { "IR1": "Comprehensive plan, regularly tested and updated" },
-                { "IR2": "Dedicated internal team" }
-              ]
-            },
-            "questions": [
-              {
-                "id": "IR2.1",
-                "question": "How do you integrate threat intelligence into your incident response process?",
-                "options": [
-                  "No integration of threat intelligence",
-                  "Manual review of threat feeds",
-                  "Automated threat intelligence integration",
-                  "AI-powered predictive threat analysis and response"
-                ]
-              },
-              {
-                "id": "IR2.2",
-                "question": "How do you manage communication during a large-scale security incident?",
-                "options": [
-                  "No specific communication plan",
-                  "Predefined communication templates",
-                  "Dedicated crisis communication team",
-                  "Automated stakeholder communication and management platform"
-                ]
-              }
-            ]
-          },
-          "BasicPlan": {
-            "conditions": {
-              "OR": [
-                { "IR1": "Basic plan, not regularly updated" },
-                { "IR2": "Ad-hoc team formed when incidents occur" }
-              ]
-            },
-            "questions": [
-              {
-                "id": "IR2.3",
-                "question": "What steps are you taking to improve your incident response capabilities?",
-                "options": [
-                  "No specific steps",
-                  "Increasing staff training",
-                  "Implementing new incident response tools",
-                  "Completely revamping our incident response framework"
-                ]
-              },
-              {
-                "id": "IR2.4",
-                "question": "How do you plan to address gaps in your current incident response plan?",
-                "options": [
-                  "No specific plans",
-                  "Conducting a gap analysis",
-                  "Engaging external consultants for improvement",
-                  "Implementing continuous improvement process with regular testing"
-                ]
-              }
-            ]
-          }
-        },
-        "Compliance": {
-          "conditions": {
-            "AND": [{ "C1": ["GDPR", "HIPAA", "PCI DSS", "SOX", "Multiple standards"] }]
-          },
-          "questions": [
-            {
-              "id": "C2.1",
-              "question": "How do you manage cross-border data transfers under various regulatory frameworks?",
-              "options": [
-                "We don't transfer data across borders",
-                "Standard contractual clauses",
-                "Binding corporate rules",
-                "Dynamic data localization and transfer management system"
-              ]
-            },
-            {
-              "id": "C2.2",
-              "question": "How do you handle conflicting requirements between different compliance standards?",
-              "options": [
-                "Comply with the strictest standard",
-                "Separate processes for each standard",
-                "Integrated compliance framework",
-                "AI-powered compliance reconciliation and optimization"
-              ]
-            }
+        "domain": "Network Security Advanced",
+        "conditions": {
+          "AND": [
+            { "NS1": "Next-generation firewall with advanced features" },
+            { "NS2": "As soon as patches are available" },
+            { "NS3": "Micro-segmentation" }
           ]
         },
-        "IndustrySector": {
-          "Healthcare": {
-            "conditions": {
-              "AND": [{ "C4": "Healthcare" }]
-            },
-            "questions": [
-              {
-                "id": "HC2.1",
-                "question": "How do you ensure the security and privacy of telehealth services?",
-                "options": [
-                  "We don't offer telehealth services",
-                  "Basic encryption for telehealth communications",
-                  "Comprehensive telehealth security platform",
-                  "AI-powered secure telehealth ecosystem with advanced patient authentication"
-                ]
-              },
-              {
-                "id": "HC2.2",
-                "question": "How do you manage security for connected medical devices?",
-                "options": [
-                  "No specific security for connected devices",
-                  "Network segmentation for medical devices",
-                  "Specialized medical device security platform",
-                  "AI-driven behavioral analysis and anomaly detection for medical devices"
-                ]
-              }
+        "questions": [
+          {
+            "id": "NS2.1",
+            "question": "How do you manage the integration between your next-generation firewall and other security tools?",
+            "options": [
+              "No integration",
+              "Basic log forwarding",
+              "API-based integration with SIEM",
+              "Full security orchestration with SOAR platform"
             ]
           },
-          "Finance": {
-            "conditions": {
-              "AND": [{ "C4": "Finance" }]
-            },
-            "questions": [
-              {
-                "id": "FI2.1",
-                "question": "How do you protect against sophisticated financial fraud attempts?",
-                "options": [
-                  "Standard transaction monitoring",
-                  "Rule-based fraud detection system",
-                  "Machine learning-based fraud detection",
-                  "Advanced AI with real-time behavioral biometrics and contextual authentication"
-                ]
-              },
-              {
-                "id": "FI2.2",
-                "question": "How do you secure blockchain or distributed ledger technology implementations?",
-                "options": [
-                  "We don't use blockchain technology",
-                  "Basic blockchain security measures",
-                  "Advanced cryptographic techniques for blockchain",
-                  "Comprehensive blockchain security framework with quantum-resistant algorithms"
-                ]
-              }
+          {
+            "id": "NS2.2",
+            "question": "How do you handle encrypted traffic inspection?",
+            "options": [
+              "No inspection of encrypted traffic",
+              "Selective decryption based on source/destination",
+              "Full SSL/TLS inspection with certificate management",
+              "AI-powered encrypted traffic analysis without decryption"
             ]
           },
-          "Retail": {
-            "conditions": {
-              "AND": [{ "C4": "Retail" }]
-            },
-            "questions": [
-              {
-                "id": "RT2.1",
-                "question": "How do you secure your omnichannel retail operations?",
-                "options": [
-                  "Separate security for each channel",
-                  "Unified security policy across channels",
-                  "Integrated omnichannel security platform",
-                  "AI-driven adaptive security for seamless omnichannel protection"
-                ]
-              },
-              {
-                "id": "RT2.2",
-                "question": "How do you protect against e-commerce specific threats like card-not-present fraud?",
-                "options": [
-                  "Basic AVS and CVV checks",
-                  "3D Secure implementation",
-                  "Machine learning-based fraud scoring",
-                  "Advanced AI with device fingerprinting and behavioral analytics"
-                ]
-              }
+          {
+            "id": "NS2.3",
+            "question": "How do you manage micro-segmentation in your network?",
+            "options": [
+              "Basic VLAN segmentation",
+              "Software-defined networking (SDN) for segmentation",
+              "Identity-based micro-segmentation",
+              "AI-driven dynamic micro-segmentation"
             ]
           }
-        }
+        ]
+      },
+      {
+        "domain": "Network Security Basic",
+        "conditions": {
+          "OR": [{ "NS1": "Basic network firewall only" }, { "NS2": "Monthly" }, { "NS3": "Basic VLAN separation" }]
+        },
+        "questions": [
+          {
+            "id": "NS2.4",
+            "question": "What plans do you have to upgrade your current firewall infrastructure?",
+            "options": [
+              "No current plans",
+              "Evaluating next-gen firewalls",
+              "Planning implementation within 6 months",
+              "Currently in the process of upgrading"
+            ]
+          },
+          {
+            "id": "NS2.5",
+            "question": "How do you currently monitor and respond to potential network intrusions?",
+            "options": [
+              "No specific monitoring",
+              "Basic log review",
+              "24/7 SOC monitoring",
+              "Automated intrusion detection and response"
+            ]
+          }
+        ]
+      },
+      {
+        "domain": "Data Protection Advanced Encryption",
+        "conditions": {
+          "AND": [{ "DP1": "Encryption both at rest and in transit" }, { "DP2": "Multi-level classification" }]
+        },
+        "questions": [
+          {
+            "id": "DP2.1",
+            "question": "How do you manage encryption for data in use (e.g., in memory, during processing)?",
+            "options": [
+              "No encryption for data in use",
+              "Limited use of homomorphic encryption",
+              "Extensive use of secure enclaves or confidential computing",
+              "Advanced multi-party computation techniques"
+            ]
+          },
+          {
+            "id": "DP2.2",
+            "question": "How do you handle key rotation and management across your infrastructure?",
+            "options": [
+              "Manual key rotation",
+              "Automated key rotation for some systems",
+              "Comprehensive key lifecycle management",
+              "Quantum-safe key management and distribution"
+            ]
+          }
+        ]
+      },
+      {
+        "domain": "Data Protection Basic Encryption",
+        "conditions": {
+          "OR": [
+            { "DP1": "Encryption at rest only" },
+            { "DP1": "Encryption in transit only" },
+            { "DP2": "Basic classification (public/private)" }
+          ]
+        },
+        "questions": [
+          {
+            "id": "DP2.3",
+            "question": "What challenges are you facing in implementing comprehensive data encryption?",
+            "options": [
+              "Lack of expertise",
+              "Budget constraints",
+              "Performance concerns",
+              "Legacy system compatibility issues"
+            ]
+          },
+          {
+            "id": "DP2.4",
+            "question": "How do you plan to enhance your data protection measures in the next 12 months?",
+            "options": [
+              "No specific plans",
+              "Implementing encryption at rest",
+              "Implementing encryption in transit",
+              "Comprehensive data protection review and enhancement"
+            ]
+          }
+        ]
+      },
+      {
+        "domain": "Incident Response Comprehensive Plan",
+        "conditions": {
+          "AND": [{ "IR1": "Comprehensive plan, regularly tested and updated" }, { "IR2": "Dedicated internal team" }]
+        },
+        "questions": [
+          {
+            "id": "IR2.1",
+            "question": "How do you integrate threat intelligence into your incident response process?",
+            "options": [
+              "No integration of threat intelligence",
+              "Manual review of threat feeds",
+              "Automated threat intelligence integration",
+              "AI-powered predictive threat analysis and response"
+            ]
+          },
+          {
+            "id": "IR2.2",
+            "question": "How do you manage communication during a large-scale security incident?",
+            "options": [
+              "No specific communication plan",
+              "Predefined communication templates",
+              "Dedicated crisis communication team",
+              "Automated stakeholder communication and management platform"
+            ]
+          }
+        ]
+      },
+      {
+        "domain": "Incident Response Basic Plan",
+        "conditions": {
+          "OR": [{ "IR1": "Basic plan, not regularly updated" }, { "IR2": "Ad-hoc team formed when incidents occur" }]
+        },
+        "questions": [
+          {
+            "id": "IR2.3",
+            "question": "What steps are you taking to improve your incident response capabilities?",
+            "options": [
+              "No specific steps",
+              "Increasing staff training",
+              "Implementing new incident response tools",
+              "Completely revamping our incident response framework"
+            ]
+          },
+          {
+            "id": "IR2.4",
+            "question": "How do you plan to address gaps in your current incident response plan?",
+            "options": [
+              "No specific plans",
+              "Conducting a gap analysis",
+              "Engaging external consultants for improvement",
+              "Implementing continuous improvement process with regular testing"
+            ]
+          }
+        ]
+      },
+      {
+        "domain": "Compliance",
+        "conditions": {
+          "AND": [{ "C1": ["GDPR", "HIPAA", "PCI DSS", "SOX", "Multiple standards"] }]
+        },
+        "questions": [
+          {
+            "id": "C2.1",
+            "question": "How do you manage cross-border data transfers under various regulatory frameworks?",
+            "options": [
+              "We don't transfer data across borders",
+              "Standard contractual clauses",
+              "Binding corporate rules",
+              "Dynamic data localization and transfer management system"
+            ]
+          },
+          {
+            "id": "C2.2",
+            "question": "How do you handle conflicting requirements between different compliance standards?",
+            "options": [
+              "Comply with the strictest standard",
+              "Separate processes for each standard",
+              "Integrated compliance framework",
+              "AI-powered compliance reconciliation and optimization"
+            ]
+          }
+        ]
+      },
+      {
+        "domain": "Healthcare",
+        "conditions": {
+          "AND": [{ "C4": "Healthcare" }]
+        },
+        "questions": [
+          {
+            "id": "HC2.1",
+            "question": "How do you ensure the security and privacy of telehealth services?",
+            "options": [
+              "We don't offer telehealth services",
+              "Basic encryption for telehealth communications",
+              "Comprehensive telehealth security platform",
+              "AI-powered secure telehealth ecosystem with advanced patient authentication"
+            ]
+          },
+          {
+            "id": "HC2.2",
+            "question": "How do you manage security for connected medical devices?",
+            "options": [
+              "No specific security for connected devices",
+              "Network segmentation for medical devices",
+              "Specialized medical device security platform",
+              "AI-driven behavioral analysis and anomaly detection for medical devices"
+            ]
+          }
+        ]
+      },
+      {
+        "domain": "Finance",
+        "conditions": {
+          "AND": [{ "C4": "Finance" }]
+        },
+        "questions": [
+          {
+            "id": "FI2.1",
+            "question": "How do you protect against sophisticated financial fraud attempts?",
+            "options": [
+              "Standard transaction monitoring",
+              "Rule-based fraud detection system",
+              "Machine learning-based fraud detection",
+              "Advanced AI with real-time behavioral biometrics and contextual authentication"
+            ]
+          },
+          {
+            "id": "FI2.2",
+            "question": "How do you secure blockchain or distributed ledger technology implementations?",
+            "options": [
+              "We don't use blockchain technology",
+              "Basic blockchain security measures",
+              "Advanced cryptographic techniques for blockchain",
+              "Comprehensive blockchain security framework with quantum-resistant algorithms"
+            ]
+          }
+        ]
+      },
+      {
+        "domain": "Retail",
+        "conditions": {
+          "AND": [{ "C4": "Retail" }]
+        },
+        "questions": [
+          {
+            "id": "RT2.1",
+            "question": "How do you secure your omnichannel retail operations?",
+            "options": [
+              "Separate security for each channel",
+              "Unified security policy across channels",
+              "Integrated omnichannel security platform",
+              "AI-driven adaptive security for seamless omnichannel protection"
+            ]
+          },
+          {
+            "id": "RT2.2",
+            "question": "How do you protect against e-commerce specific threats like card-not-present fraud?",
+            "options": [
+              "Basic AVS and CVV checks",
+              "3D Secure implementation",
+              "Machine learning-based fraud scoring",
+              "Advanced AI with device fingerprinting and behavioral analytics"
+            ]
+          }
+        ]
       }
     ],
     "phase3": [
       {
-        "NetworkSecurity": {
-          "Advanced": {
-            "conditions": {
-              "AND": [
-                { "NS2.1": "API-based integration with SIEM" },
-                { "NS2.2": "Full SSL/TLS inspection with certificate management" },
-                { "NS2.3": "Identity-based micro-segmentation" }
-              ]
-            },
-            "questions": [
-              {
-                "id": "NS3.1",
-                "question": "How do you manage the integration between your next-generation firewall and other security tools?",
-                "options": [
-                  "No integration",
-                  "Basic log forwarding",
-                  "API-based integration with SIEM",
-                  "Full security orchestration with SOAR platform"
-                ]
-              },
-              {
-                "id": "NS3.2",
-                "question": "How do you handle encrypted traffic inspection?",
-                "options": [
-                  "No inspection of encrypted traffic",
-                  "Selective decryption based on source/destination",
-                  "Full SSL/TLS inspection with certificate management",
-                  "AI-powered encrypted traffic analysis without decryption"
-                ]
-              },
-              {
-                "id": "NS3.3",
-                "question": "How do you manage micro-segmentation in your Zero Trust architecture?",
-                "options": [
-                  "Basic VLAN segmentation",
-                  "Software-defined networking (SDN) for segmentation",
-                  "Identity-based micro-segmentation",
-                  "AI-driven dynamic micro-segmentation"
-                ]
-              }
-            ]
-          },
-          "Basic": {
-            "conditions": {
-              "OR": [{ "NS2.4": "No current plans" }, { "NS2.5": "Basic log review" }]
-            },
-            "questions": [
-              {
-                "id": "NS3.4",
-                "question": "What plans do you have to upgrade your current firewall infrastructure?",
-                "options": [
-                  "No current plans",
-                  "Evaluating next-gen firewalls",
-                  "Planning implementation within 6 months",
-                  "Currently in the process of upgrading"
-                ]
-              },
-              {
-                "id": "NS3.5",
-                "question": "How do you currently monitor and respond to potential network intrusions?",
-                "options": [
-                  "No specific monitoring",
-                  "Basic log review",
-                  "24/7 SOC monitoring",
-                  "AI-powered SOC with automated response capabilities"
-                ]
-              }
-            ]
-          }
+        "domain": "Network Security Advanced",
+        "conditions": {
+          "AND": [
+            { "NS2.1": "API-based integration with SIEM" },
+            { "NS2.2": "Full SSL/TLS inspection with certificate management" },
+            { "NS2.3": "Identity-based micro-segmentation" }
+          ]
         },
-        "DataProtection": {
-          "AdvancedEncryption": {
-            "conditions": {
-              "AND": [
-                { "DP2.1": "Extensive use of secure enclaves or confidential computing" },
-                { "DP2.2": "Comprehensive key lifecycle management" }
-              ]
-            },
-            "questions": [
-              {
-                "id": "DP3.1",
-                "question": "How do you manage encryption for data in use (e.g., in memory, during processing)?",
-                "options": [
-                  "No encryption for data in use",
-                  "Limited use of homomorphic encryption",
-                  "Extensive use of secure enclaves or confidential computing",
-                  "Advanced multi-party computation techniques"
-                ]
-              },
-              {
-                "id": "DP3.2",
-                "question": "How do you handle key rotation and management across your infrastructure?",
-                "options": [
-                  "Manual key rotation",
-                  "Automated key rotation for some systems",
-                  "Comprehensive key lifecycle management",
-                  "Quantum-safe key management and distribution"
-                ]
-              }
+        "questions": [
+          {
+            "id": "NS3.1",
+            "question": "How do you manage the integration between your next-generation firewall and other security tools?",
+            "options": [
+              "No integration",
+              "Basic log forwarding",
+              "API-based integration with SIEM",
+              "Full security orchestration with SOAR platform"
             ]
           },
-          "BasicEncryption": {
-            "conditions": {
-              "OR": [{ "DP2.3": "Lack of expertise" }, { "DP2.4": "No specific plans" }]
-            },
-            "questions": [
-              {
-                "id": "DP3.3",
-                "question": "What challenges are you facing in implementing comprehensive data encryption?",
-                "options": [
-                  "Lack of expertise",
-                  "Budget constraints",
-                  "Performance concerns",
-                  "Legacy system compatibility issues"
-                ]
-              },
-              {
-                "id": "DP3.4",
-                "question": "How do you plan to enhance your data protection measures in the next 12 months?",
-                "options": [
-                  "No specific plans",
-                  "Implementing encryption at rest",
-                  "Implementing encryption in transit",
-                  "Comprehensive data protection review and enhancement"
-                ]
-              }
+          {
+            "id": "NS3.2",
+            "question": "How do you handle encrypted traffic inspection?",
+            "options": [
+              "No inspection of encrypted traffic",
+              "Selective decryption based on source/destination",
+              "Full SSL/TLS inspection with certificate management",
+              "AI-powered encrypted traffic analysis without decryption"
+            ]
+          },
+          {
+            "id": "NS3.3",
+            "question": "How do you manage micro-segmentation in your Zero Trust architecture?",
+            "options": [
+              "Basic VLAN segmentation",
+              "Software-defined networking (SDN) for segmentation",
+              "Identity-based micro-segmentation",
+              "AI-driven dynamic micro-segmentation"
             ]
           }
-        }
+        ]
+      },
+      {
+        "domain": "Network Security Basic",
+        "conditions": {
+          "OR": [{ "NS2.4": "No current plans" }, { "NS2.5": "Basic log review" }]
+        },
+        "questions": [
+          {
+            "id": "NS3.4",
+            "question": "What plans do you have to upgrade your current firewall infrastructure?",
+            "options": [
+              "No current plans",
+              "Evaluating next-gen firewalls",
+              "Planning implementation within 6 months",
+              "Currently in the process of upgrading"
+            ]
+          },
+          {
+            "id": "NS3.5",
+            "question": "How do you currently monitor and respond to potential network intrusions?",
+            "options": [
+              "No specific monitoring",
+              "Basic log review",
+              "24/7 SOC monitoring",
+              "AI-powered SOC with automated response capabilities"
+            ]
+          }
+        ]
+      },
+      {
+        "domain": "Data Protection Advanced Encryption",
+        "conditions": {
+          "AND": [
+            { "DP2.1": "Extensive use of secure enclaves or confidential computing" },
+            { "DP2.2": "Comprehensive key lifecycle management" }
+          ]
+        },
+        "questions": [
+          {
+            "id": "DP3.1",
+            "question": "How do you manage encryption for data in use (e.g., in memory, during processing)?",
+            "options": [
+              "No encryption for data in use",
+              "Limited use of homomorphic encryption",
+              "Extensive use of secure enclaves or confidential computing",
+              "Advanced multi-party computation techniques"
+            ]
+          },
+          {
+            "id": "DP3.2",
+            "question": "How do you handle key rotation and management across your infrastructure?",
+            "options": [
+              "Manual key rotation",
+              "Automated key rotation for some systems",
+              "Comprehensive key lifecycle management",
+              "Quantum-safe key management and distribution"
+            ]
+          }
+        ]
+      },
+      {
+        "domain": "Data Protection Basic Encryption",
+        "conditions": {
+          "OR": [{ "DP2.3": "Lack of expertise" }, { "DP2.4": "No specific plans" }]
+        },
+        "questions": [
+          {
+            "id": "DP3.3",
+            "question": "What challenges are you facing in implementing comprehensive data encryption?",
+            "options": [
+              "Lack of expertise",
+              "Budget constraints",
+              "Performance concerns",
+              "Legacy system compatibility issues"
+            ]
+          },
+          {
+            "id": "DP3.4",
+            "question": "How do you plan to enhance your data protection measures in the next 12 months?",
+            "options": [
+              "No specific plans",
+              "Implementing encryption at rest",
+              "Implementing encryption in transit",
+              "Comprehensive data protection review and enhancement"
+            ]
+          }
+        ]
       }
     ],
     "phase4": [
       {
-        "NetworkSecurity": {
-          "AdvancedFirewall": {
-            "conditions": {
-              "AND": [
-                { "NS3.1": "Full security orchestration with SOAR platform" },
-                { "NS3.2": "AI-powered encrypted traffic analysis without decryption" }
-              ]
-            },
-            "questions": [
-              {
-                "id": "NS4.1",
-                "question": "How do you leverage AI/ML capabilities in your next-generation firewall?",
-                "options": [
-                  "No AI/ML capabilities",
-                  "Basic threat intelligence integration",
-                  "Advanced behavioral analysis",
-                  "Fully autonomous threat response and adaptation"
-                ]
-              },
-              {
-                "id": "NS4.2",
-                "question": "How do you manage firewall policies across multiple cloud environments?",
-                "options": [
-                  "Separate policies for each cloud",
-                  "Centralized policy management",
-                  "Cloud-agnostic policy orchestration",
-                  "AI-driven policy optimization across hybrid environments"
-                ]
-              }
-            ]
-          },
-          "ZeroTrust": {
-            "conditions": {
-              "AND": [
-                { "NS3.3": "AI-driven dynamic micro-segmentation" },
-                { "NS3.5": "AI-powered SOC with automated response capabilities" }
-              ]
-            },
-            "questions": [
-              {
-                "id": "NS4.3",
-                "question": "How do you implement continuous authentication in your Zero Trust model?",
-                "options": [
-                  "Periodic re-authentication",
-                  "Risk-based authentication",
-                  "Continuous behavioral biometrics",
-                  "AI-powered contextual and environmental analysis"
-                ]
-              },
-              {
-                "id": "NS4.4",
-                "question": "How do you manage Zero Trust in your IoT ecosystem?",
-                "options": [
-                  "Network segmentation for IoT devices",
-                  "Device-level authentication and authorization",
-                  "Continuous monitoring and behavioral analysis of IoT devices",
-                  "AI-driven autonomous IoT security with self-healing capabilities"
-                ]
-              }
-            ]
-          }
+        "domain": "Network Security Advanced Firewall",
+        "conditions": {
+          "AND": [
+            { "NS3.1": "Full security orchestration with SOAR platform" },
+            { "NS3.2": "AI-powered encrypted traffic analysis without decryption" }
+          ]
         },
-        "DataProtection": {
-          "QuantumSafeEncryption": {
-            "conditions": {
-              "AND": [
-                { "DP3.1": "Advanced multi-party computation techniques" },
-                { "DP3.2": "Quantum-safe key management and distribution" }
-              ]
-            },
-            "questions": [
-              {
-                "id": "DP4.1",
-                "question": "What quantum-resistant encryption methods are you implementing or planning to implement?",
-                "options": [
-                  "No plans for quantum-resistant encryption",
-                  "Evaluating post-quantum cryptography options",
-                  "Implementing lattice-based cryptography",
-                  "Comprehensive quantum-safe cryptography framework"
-                ]
-              },
-              {
-                "id": "DP4.2",
-                "question": "How are you preparing your PKI infrastructure for the post-quantum era?",
-                "options": [
-                  "No specific preparations",
-                  "Increasing key sizes",
-                  "Implementing hybrid classical-quantum schemes",
-                  "Complete overhaul with quantum-resistant algorithms"
-                ]
-              }
+        "questions": [
+          {
+            "id": "NS4.1",
+            "question": "How do you leverage AI/ML capabilities in your next-generation firewall?",
+            "options": [
+              "No AI/ML capabilities",
+              "Basic threat intelligence integration",
+              "Advanced behavioral analysis",
+              "Fully autonomous threat response and adaptation"
             ]
           },
-          "AIDataProtection": {
-            "conditions": {
-              "AND": [
-                { "DP3.3": "Legacy system compatibility issues" },
-                { "DP3.4": "Comprehensive data protection review and enhancement" }
-              ]
-            },
-            "questions": [
-              {
-                "id": "DP4.3",
-                "question": "How do you protect the privacy of data used in AI/ML models?",
-                "options": [
-                  "Standard data anonymization",
-                  "Differential privacy techniques",
-                  "Federated learning approaches",
-                  "Advanced homomorphic encryption for AI computations"
-                ]
-              },
-              {
-                "id": "DP4.4",
-                "question": "How do you ensure the integrity and security of your AI/ML models?",
-                "options": [
-                  "Basic access controls",
-                  "Model encryption",
-                  "Adversarial training and robustness testing",
-                  "Continuous AI model monitoring and autonomous retraining"
-                ]
-              }
+          {
+            "id": "NS4.2",
+            "question": "How do you manage firewall policies across multiple cloud environments?",
+            "options": [
+              "Separate policies for each cloud",
+              "Centralized policy management",
+              "Cloud-agnostic policy orchestration",
+              "AI-driven policy optimization across hybrid environments"
             ]
           }
-        }
+        ]
+      },
+      {
+        "domain": "Network Security Zero Trust",
+        "conditions": {
+          "AND": [
+            { "NS3.3": "AI-driven dynamic micro-segmentation" },
+            { "NS3.5": "AI-powered SOC with automated response capabilities" }
+          ]
+        },
+        "questions": [
+          {
+            "id": "NS4.3",
+            "question": "How do you implement continuous authentication in your Zero Trust model?",
+            "options": [
+              "Periodic re-authentication",
+              "Risk-based authentication",
+              "Continuous behavioral biometrics",
+              "AI-powered contextual and environmental analysis"
+            ]
+          },
+          {
+            "id": "NS4.4",
+            "question": "How do you manage Zero Trust in your IoT ecosystem?",
+            "options": [
+              "Network segmentation for IoT devices",
+              "Device-level authentication and authorization",
+              "Continuous monitoring and behavioral analysis of IoT devices",
+              "AI-driven autonomous IoT security with self-healing capabilities"
+            ]
+          }
+        ]
+      },
+      {
+        "domain": "Data Protection Quantum-Safe Encryption",
+        "conditions": {
+          "AND": [
+            { "DP3.1": "Advanced multi-party computation techniques" },
+            { "DP3.2": "Quantum-safe key management and distribution" }
+          ]
+        },
+        "questions": [
+          {
+            "id": "DP4.1",
+            "question": "What quantum-resistant encryption methods are you implementing or planning to implement?",
+            "options": [
+              "No plans for quantum-resistant encryption",
+              "Evaluating post-quantum cryptography options",
+              "Implementing lattice-based cryptography",
+              "Comprehensive quantum-safe cryptography framework"
+            ]
+          },
+          {
+            "id": "DP4.2",
+            "question": "How are you preparing your PKI infrastructure for the post-quantum era?",
+            "options": [
+              "No specific preparations",
+              "Increasing key sizes",
+              "Implementing hybrid classical-quantum schemes",
+              "Complete overhaul with quantum-resistant algorithms"
+            ]
+          }
+        ]
+      },
+      {
+        "domain": "Data Protection AI-Driven",
+        "conditions": {
+          "AND": [
+            { "DP3.3": "Legacy system compatibility issues" },
+            { "DP3.4": "Comprehensive data protection review and enhancement" }
+          ]
+        },
+        "questions": [
+          {
+            "id": "DP4.3",
+            "question": "How do you protect the privacy of data used in AI/ML models?",
+            "options": [
+              "Standard data anonymization",
+              "Differential privacy techniques",
+              "Federated learning approaches",
+              "Advanced homomorphic encryption for AI computations"
+            ]
+          },
+          {
+            "id": "DP4.4",
+            "question": "How do you ensure the integrity and security of your AI/ML models?",
+            "options": [
+              "Basic access controls",
+              "Model encryption",
+              "Adversarial training and robustness testing",
+              "Continuous AI model monitoring and autonomous retraining"
+            ]
+          }
+        ]
       }
     ],
     "phase5": [
       {
-        "NetworkSecurity": {
-          "AdvancedAutonomous": {
-            "conditions": {
-              "AND": [
-                { "NS4.1": "Fully autonomous threat response and adaptation" },
-                { "NS4.2": "AI-driven policy optimization across hybrid environments" }
-              ]
-            },
-            "questions": [
-              {
-                "id": "NS5.1",
-                "question": "How do you ensure the reliability of autonomous security decisions?",
-                "options": [
-                  "Basic validation checks",
-                  "Human oversight of critical decisions",
-                  "AI decision validation framework",
-                  "Self-validating AI with continuous learning"
-                ]
-              },
-              {
-                "id": "NS5.2",
-                "question": "How do you manage policy conflicts in your autonomous security system?",
-                "options": [
-                  "Manual conflict resolution",
-                  "Rule-based conflict resolution",
-                  "AI-powered policy reconciliation",
-                  "Dynamic policy optimization with predictive conflict avoidance"
-                ]
-              }
-            ]
-          },
-          "ZeroTrustEvolution": {
-            "conditions": {
-              "AND": [
-                { "NS4.3": "AI-powered contextual and environmental analysis" },
-                { "NS4.4": "AI-driven autonomous IoT security with self-healing capabilities" }
-              ]
-            },
-            "questions": [
-              {
-                "id": "NS5.3",
-                "question": "How do you manage Zero Trust authentication across your autonomous systems?",
-                "options": [
-                  "Traditional authentication methods",
-                  "Risk-based authentication",
-                  "AI-powered continuous authentication",
-                  "Self-evolving authentication framework"
-                ]
-              },
-              {
-                "id": "NS5.4",
-                "question": "How do you handle Zero Trust policy evolution in response to new threats?",
-                "options": [
-                  "Manual policy updates",
-                  "Scheduled policy reviews",
-                  "AI-driven policy adaptation",
-                  "Autonomous policy evolution with threat prediction"
-                ]
-              }
-            ]
-          }
+        "domain": "Network Security Advanced Autonomous",
+        "conditions": {
+          "AND": [
+            { "NS4.1": "Fully autonomous threat response and adaptation" },
+            { "NS4.2": "AI-driven policy optimization across hybrid environments" }
+          ]
         },
-        "DataProtection": {
-          "QuantumReadiness": {
-            "conditions": {
-              "AND": [
-                { "DP4.1": "Comprehensive quantum-safe cryptography framework" },
-                { "DP4.2": "Complete overhaul with quantum-resistant algorithms" }
-              ]
-            },
-            "questions": [
-              {
-                "id": "DP5.1",
-                "question": "How do you validate the effectiveness of your quantum-safe implementations?",
-                "options": [
-                  "Traditional security testing",
-                  "Quantum-specific security testing",
-                  "Advanced quantum simulation testing",
-                  "Continuous quantum vulnerability assessment"
-                ]
-              },
-              {
-                "id": "DP5.2",
-                "question": "How do you manage the transition to quantum-safe algorithms across your infrastructure?",
-                "options": [
-                  "Gradual replacement approach",
-                  "Parallel implementation strategy",
-                  "Hybrid classical-quantum deployment",
-                  "AI-driven quantum-safe transition management"
-                ]
-              }
+        "questions": [
+          {
+            "id": "NS5.1",
+            "question": "How do you ensure the reliability of autonomous security decisions?",
+            "options": [
+              "Basic validation checks",
+              "Human oversight of critical decisions",
+              "AI decision validation framework",
+              "Self-validating AI with continuous learning"
             ]
           },
-          "AISecurity": {
-            "conditions": {
-              "AND": [
-                { "DP4.3": "Advanced homomorphic encryption for AI computations" },
-                { "DP4.4": "Continuous AI model monitoring and autonomous retraining" }
-              ]
-            },
-            "questions": [
-              {
-                "id": "DP5.3",
-                "question": "How do you protect AI models and training data from adversarial attacks?",
-                "options": [
-                  "Basic security controls",
-                  "Advanced encryption for AI assets",
-                  "AI-powered threat detection for models",
-                  "Self-defending AI systems with autonomous recovery"
-                ]
-              },
-              {
-                "id": "DP5.4",
-                "question": "How do you ensure privacy in AI-driven data processing?",
-                "options": [
-                  "Standard data anonymization",
-                  "Advanced privacy-preserving techniques",
-                  "Privacy-aware AI architecture",
-                  "Self-optimizing privacy preservation framework"
-                ]
-              }
+          {
+            "id": "NS5.2",
+            "question": "How do you manage policy conflicts in your autonomous security system?",
+            "options": [
+              "Manual conflict resolution",
+              "Rule-based conflict resolution",
+              "AI-powered policy reconciliation",
+              "Dynamic policy optimization with predictive conflict avoidance"
             ]
           }
-        }
+        ]
+      },
+      {
+        "domain": "Network Security Zero Trust Evolution",
+        "conditions": {
+          "AND": [
+            { "NS4.3": "AI-powered contextual and environmental analysis" },
+            { "NS4.4": "AI-driven autonomous IoT security with self-healing capabilities" }
+          ]
+        },
+        "questions": [
+          {
+            "id": "NS5.3",
+            "question": "How do you manage Zero Trust authentication across your autonomous systems?",
+            "options": [
+              "Traditional authentication methods",
+              "Risk-based authentication",
+              "AI-powered continuous authentication",
+              "Self-evolving authentication framework"
+            ]
+          },
+          {
+            "id": "NS5.4",
+            "question": "How do you handle Zero Trust policy evolution in response to new threats?",
+            "options": [
+              "Manual policy updates",
+              "Scheduled policy reviews",
+              "AI-driven policy adaptation",
+              "Autonomous policy evolution with threat prediction"
+            ]
+          }
+        ]
+      },
+      {
+        "domain": "Data Protection Quantum Readiness",
+        "conditions": {
+          "AND": [
+            { "DP4.1": "Comprehensive quantum-safe cryptography framework" },
+            { "DP4.2": "Complete overhaul with quantum-resistant algorithms" }
+          ]
+        },
+        "questions": [
+          {
+            "id": "DP5.1",
+            "question": "How do you validate the effectiveness of your quantum-safe implementations?",
+            "options": [
+              "Traditional security testing",
+              "Quantum-specific security testing",
+              "Advanced quantum simulation testing",
+              "Continuous quantum vulnerability assessment"
+            ]
+          },
+          {
+            "id": "DP5.2",
+            "question": "How do you manage the transition to quantum-safe algorithms across your infrastructure?",
+            "options": [
+              "Gradual replacement approach",
+              "Parallel implementation strategy",
+              "Hybrid classical-quantum deployment",
+              "AI-driven quantum-safe transition management"
+            ]
+          }
+        ]
+      },
+      {
+        "domain": "Data Protection AI Security",
+        "conditions": {
+          "AND": [
+            { "DP4.3": "Advanced homomorphic encryption for AI computations" },
+            { "DP4.4": "Continuous AI model monitoring and autonomous retraining" }
+          ]
+        },
+        "questions": [
+          {
+            "id": "DP5.3",
+            "question": "How do you protect AI models and training data from adversarial attacks?",
+            "options": [
+              "Basic security controls",
+              "Advanced encryption for AI assets",
+              "AI-powered threat detection for models",
+              "Self-defending AI systems with autonomous recovery"
+            ]
+          },
+          {
+            "id": "DP5.4",
+            "question": "How do you ensure privacy in AI-driven data processing?",
+            "options": [
+              "Standard data anonymization",
+              "Advanced privacy-preserving techniques",
+              "Privacy-aware AI architecture",
+              "Self-optimizing privacy preservation framework"
+            ]
+          }
+        ]
       }
     ]
   }
