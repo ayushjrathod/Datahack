@@ -1,49 +1,19 @@
 import { useEffect, useRef } from "react";
-import { useParams } from "react-router-dom";
-import { atom, useRecoilState, useRecoilValue } from "recoil";
+import { useLocation, useParams } from "react-router-dom";
+import { useRecoilState } from "recoil";
 import ChatInput from "../components/Chatbot/ChatInput";
 import ChatMessages from "../components/Chatbot/ChatMessages";
 import DrawerBackdrop from "../components/Chatbot/DrawerBackdrop";
 import Navbar from "../components/Chatbot/Navbar";
 import Sidebar from "../components/Chatbot/Sidebar";
-
-// Recoil atoms
-const drawerOpenState = atom({
-  key: "drawerOpenState",
-  default: false,
-});
-
-const chatIdState = atom({
-  key: "chatIdState",
-  default: null,
-});
-
-const messagesState = atom({
-  key: "messagesState",
-  default: [],
-});
-
-const inputState = atom({
-  key: "inputState",
-  default: "",
-});
-
-const chatsState = atom({
-  key: "chatsState",
-  default: [{ id: 1, title: "General Chat" }],
-});
-
-const initialChatMessagesState = atom({
-  key: "initialChatMessagesState",
-  default: {
-    1: [
-      {
-        role: "assistant", //another role is user
-        content: [{ text: "Hello! How can I assist you today?" }],
-      },
-    ],
-  },
-});
+import {
+  chatIdState,
+  chatsState,
+  drawerOpenState,
+  initialChatMessagesState,
+  inputState,
+  messagesState,
+} from "../utils/recoil/atoms";
 
 function Chatbot() {
   const [drawerOpen, setDrawerOpen] = useRecoilState(drawerOpenState);
@@ -51,14 +21,11 @@ function Chatbot() {
   const [messages, setMessages] = useRecoilState(messagesState);
   const [input, setInput] = useRecoilState(inputState);
   const [chats, setChats] = useRecoilState(chatsState);
-  const initialChatMessages = useRecoilValue(initialChatMessagesState);
-  let chatsArray = [
-    {
-      id: 1,
-      title: "General Chat",
-    },
-  ];
+  const [initialChatMessages, setInitialChatMessages] = useRecoilState(initialChatMessagesState);
 
+  const location = useLocation();
+  const { data } = location.state || {};
+  setInitialChatMessages(data);
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
   const { id } = useParams();
@@ -88,11 +55,7 @@ function Chatbot() {
         content: [{ text: "Hello! How can I help you today?" }],
       },
     ]);
-    const temp = { id: newId, title: newTitle };
-    setChats((prevChatsArray) => {
-      const updatedChatsArray = [...prevChatsArray, temp];
-      return updatedChatsArray;
-    });
+    setChats((prevChatsArray) => [...prevChatsArray, { id: newId, title: newTitle }]);
     setDrawerOpen(false);
     inputRef.current?.focus();
   };
@@ -108,7 +71,7 @@ function Chatbot() {
 
     try {
       console.log("starting fetch");
-      const response = await fetch(`http://127.0.0.1:8000/ask/${id}`, {
+      const response = await fetch(`http://127.0.0.1:8000/ask`, {
         method: "POST",
         body: JSON.stringify({ query: input }),
         mode: "cors",
@@ -146,6 +109,51 @@ function Chatbot() {
     }
   };
 
+  const handleFileUpload = async (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      console.log(`Uploading file: ${file.name}`);
+
+      const formData = new FormData();
+      formData.append("file", file);
+
+      try {
+        const response = await fetch("http://127.0.0.1:8000/upload", {
+          method: "POST",
+          body: formData,
+        });
+
+        if (response.ok) {
+          const result = await response.json();
+          console.log("File uploaded successfully:", result);
+
+          const fileMessage = {
+            role: "user",
+            content: [{ text: `Uploaded file: ${file.name}` }],
+          };
+          setMessages((prev) => [...prev, fileMessage]);
+
+          setInput(`I've just uploaded a file named ${file.name}. Can you analyze it?`);
+          handleSendMessage();
+        } else {
+          console.error("File upload failed");
+          const errorMessage = {
+            role: "assistant",
+            content: [{ text: "Sorry, there was an error uploading the file." }],
+          };
+          setMessages((prev) => [...prev, errorMessage]);
+        }
+      } catch (error) {
+        console.error("Error uploading file:", error);
+        const errorMessage = {
+          role: "assistant",
+          content: [{ text: "Sorry, there was an error uploading the file." }],
+        };
+        setMessages((prev) => [...prev, errorMessage]);
+      }
+    }
+  };
+
   return (
     <div className="antialiased bg-gray-50">
       <Navbar toggleDrawer={toggleDrawer} />
@@ -166,6 +174,7 @@ function Chatbot() {
             handleSendMessage={handleSendMessage}
             handleKeyPress={handleKeyPress}
             inputRef={inputRef}
+            handleFileUpload={handleFileUpload}
           />
         </div>
       </main>

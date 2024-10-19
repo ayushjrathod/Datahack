@@ -4,11 +4,9 @@ import UploadDocument from "../components/Home/Uploaddoc";
 
 const Home = () => {
   return (
-    <div className="flex flex-row gap-4">
+    <div className="flex flex-row gap-4 h-screen w-screen bg-[#3076F8]">
       <Link to="/chatbot">Open Chatbot</Link>
       <UploadDocument />
-      <Link to="/questionnaire">Questionnaire</Link>
-      <Link to="/compliance-check">Compliance Check</Link>
     </div>
   );
 };

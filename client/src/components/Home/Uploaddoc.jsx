@@ -37,7 +37,7 @@ const UploadDocument = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
+    <div className="flex flex-col">
       {loading ? (
         <div className="loader border-t-4 border-blue-500 rounded-full w-12 h-12 animate-spin"></div>
       ) : (
@@ -45,7 +45,7 @@ const UploadDocument = () => {
           <input type="file" onChange={handleFileChange} className="mb-4" />
           <button
             onClick={handleUpload}
-            className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition"
+            className="bg-[#E4494D] text-white py-2 px-4 rounded hover:bg-blue-600 transition"
           >
             Upload Document
           </button>

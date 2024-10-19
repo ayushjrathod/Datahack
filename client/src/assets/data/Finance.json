@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "question_text": "Have you installed and maintained a firewall configuration to protect cardholder data?"
+  },
+  {
+    "id": 2,
+    "question_text": "Are your firewall rules reviewed regularly (at least every 6 months) to ensure compliance with PCI DSS?"
+  },
+  {
+    "id": 3,
+    "question_text": "Are firewall and router configurations properly documented?"
+  },
+  {
+    "id": 4,
+    "question_text": "Are vendor-supplied defaults (e.g., default passwords) changed before installing new systems, and is there a policy in place for this?"
+  },
+  {
+    "id": 5,
+    "question_text": "Is cardholder data encrypted when stored, using strong encryption protocols such as AES-256?"
+  },
+  {
+    "id": 6,
+    "question_text": "Is cardholder data encrypted during transmission across open, public networks (e.g., Internet, Wi-Fi)?"
+  },
+  {
+    "id": 7,
+    "question_text": "Do you limit the storage of cardholder data and ensure that data is only stored for the necessary retention period?"
+  },
+  {
+    "id": 8,
+    "question_text": "Is sensitive authentication data (e.g., full magnetic stripe data, CVV) never stored after authorization?"
+  },
+  {
+    "id": 9,
+    "question_text": "Do you have processes in place to securely delete cardholder data after its retention period has expired?"
+  },
+  {
+    "id": 10,
+    "question_text": "Do you regularly update all system components and software with security patches (e.g., operating systems, applications)?"
+  },
+  {
+    "id": 11,
+    "question_text": "Is antivirus software or programs installed on all systems commonly affected by malware, and is it regularly updated?"
+  },
+  {
+    "id": 12,
+    "question_text": "Do you conduct regular vulnerability scans (at least quarterly) to identify potential weaknesses?"
+  },
+  {
+    "id": 13,
+    "question_text": "Do you perform penetration testing annually or after significant network changes to ensure systems are secure?"
+  },
+  {
+    "id": 14,
+    "question_text": "Is access to systems and data containing cardholder information restricted to only authorized personnel?"
+  },
+  {
+    "id": 15,
+    "question_text": "Is multi-factor authentication (MFA) used for remote access to systems handling cardholder data?"
+  },
+  {
+    "id": 16,
+    "question_text": "Are unique IDs assigned to each person who has access to systems handling cardholder data?"
+  },
+  {
+    "id": 17,
+    "question_text": "Are access rights reviewed regularly to ensure only necessary personnel have access to cardholder data?"
+  },
+  {
+    "id": 18,
+    "question_text": "Are there controls in place to restrict physical access to systems where cardholder data is stored (e.g., server rooms)?"
+  },
+  {
+    "id": 19,
+    "question_text": "Do you track and monitor all access to network resources and cardholder data, including logging user activities?"
+  },
+  {
+    "id": 20,
+    "question_text": "Are audit logs maintained and retained for at least one year, with the first three months easily accessible for analysis?"
+  },
+  {
+    "id": 21,
+    "question_text": "Is there a process in place to regularly review logs and detect suspicious activities that could indicate a breach?"
+  },
+  {
+    "id": 22,
+    "question_text": "Do you perform internal and external vulnerability scans at least quarterly, and after any significant changes to the environment?"
+  },
+  {
+    "id": 23,
+    "question_text": "Do you have a documented information security policy in place that addresses PCI DSS compliance?"
+  },
+  {
+    "id": 24,
+    "question_text": "Is your security policy reviewed at least annually to ensure it remains relevant and up-to-date?"
+  },
+  {
+    "id": 25,
+    "question_text": "Is cybersecurity awareness training conducted for all employees, especially those handling cardholder data?"
+  },
+  {
+    "id": 26,
+    "question_text": "Are employees made aware of the importance of protecting cardholder data and their role in maintaining security?"
+  },
+  {
+    "id": 27,
+    "question_text": "Do you have an incident response plan that addresses potential data breaches involving cardholder data?"
+  },
+  {
+    "id": 28,
+    "question_text": "Is your incident response plan tested at least annually to ensure readiness in the event of a security breach?"
+  },
+  {
+    "id": 29,
+    "question_text": "Are there designated personnel responsible for responding to a breach of cardholder data?"
+  },
+  {
+    "id": 30,
+    "question_text": "Are card brands (e.g., Visa, Mastercard) and relevant authorities notified immediately in the event of a data breach?"
+  },
+  {
+    "id": 31,
+    "question_text": "Do you limit the storage of cardholder data to only what is required for legal, regulatory, and business requirements?"
+  },
+  {
+    "id": 32,
+    "question_text": "Is sensitive cardholder information stored using strong encryption methods (e.g., AES, RSA)?"
+  },
+  {
+    "id": 33,
+    "question_text": "Are encryption keys stored securely, and are they managed with strong access control procedures?"
+  },
+  {
+    "id": 34,
+    "question_text": "Is cardholder data securely erased after its retention period ends, using methods like secure wipe or shredding for physical copies?"
+  },
+  {
+    "id": 35,
+    "question_text": "Are strong encryption protocols (e.g., TLS, SSL) used to transmit cardholder data over open or public networks?"
+  },
+  {
+    "id": 36,
+    "question_text": "Do you ensure that the encryption keys are rotated and managed securely?"
+  },
+  {
+    "id": 37,
+    "question_text": "Is cardholder data never transmitted through email or any non-secure communication channel?"
+  },
+  {
+    "id": 38,
+    "question_text": "Do you perform due diligence on third-party service providers (e.g., payment processors) to ensure their PCI DSS compliance?"
+  },
+  {
+    "id": 39,
+    "question_text": "Is there a process in place to verify that third-party vendors handling cardholder data comply with PCI DSS?"
+  },
+  {
+    "id": 40,
+    "question_text": "Are contracts with third-party service providers regularly reviewed to ensure they include data protection clauses aligned with PCI DSS?"
+  },
+  {
+    "id": 41,
+    "question_text": "Do you maintain documentation of all systems and devices that store, process, or transmit cardholder data?"
+  },
+  {
+    "id": 42,
+    "question_text": "Do you have procedures in place to ensure that only necessary cardholder data is stored?"
+  },
+  {
+    "id": 43,
+    "question_text": "Is physical access to cardholder data, both in electronic and paper form, restricted to authorized personnel only?"
+  },
+  {
+    "id": 44,
+    "question_text": "Do you conduct background checks on employees who have access to cardholder data?"
+  },
+  {
+    "id": 45,
+    "question_text": "Do you maintain a list of service providers who have access to your cardholder data environment?"
+  },
+  {
+    "id": 46,
+    "question_text": "Is there a documented process to handle the onboarding and offboarding of employees who have access to cardholder data?"
+  },
+  {
+    "id": 47,
+    "question_text": "Do you maintain written agreements with all service providers confirming their responsibility for PCI DSS compliance?"
+  },
+  {
+    "id": 48,
+    "question_text": "Are security patches applied within a specified time frame (e.g., critical patches within 30 days)?"
+  },
+  {
+    "id": 49,
+    "question_text": "Is there a designated team or personnel responsible for monitoring security alerts and handling incidents?"
+  },
+  {
+    "id": 50,
+    "question_text": "Are systems that store cardholder data segmented from the rest of the network using firewalls or other methods?"
+  }
+]

@@ -28,7 +28,39 @@ export const progressState = atom({
   default: 0,
 });
 
-export const fileDataState = atom({
-  key: "fileDataState",
+export const drawerOpenState = atom({
+  key: "drawerOpenState",
+  default: false,
+});
+
+export const chatIdState = atom({
+  key: "chatIdState",
   default: null,
+});
+
+export const messagesState = atom({
+  key: "messagesState",
+  default: [],
+});
+
+export const inputState = atom({
+  key: "inputState",
+  default: "",
+});
+
+export const chatsState = atom({
+  key: "chatsState",
+  default: [{ id: 1, title: "General Chat" }],
+});
+
+export const initialChatMessagesState = atom({
+  key: "initialChatMessagesState",
+  default: {
+    1: [
+      {
+        role: "assistant",
+        content: [{ text: "Hello! How can I assist you today?" }],
+      },
+    ],
+  },
 });
