@@ -23,7 +23,6 @@ const currentQuestionsState = selector({
   },
 });
 
-// Add back the evaluateConditions function
 const evaluateConditions = (conditions, answers) => {
   if (conditions.AND) {
     return conditions.AND.every((condition) => evaluateCondition(condition, answers));
@@ -56,7 +55,6 @@ const PhasedQuestionnaire = () => {
     const progressPercentage = totalQuestions > 0 ? (answeredQuestions / totalQuestions) * 100 : 0;
     setPhaseProgress(progressPercentage);
 
-    // Check if we've reached the end of all questions or if there are no current questions
     if (currentPhase > 5 || (currentPhase === 5 && progressPercentage === 100) || currentQuestions.length === 0) {
       submitResponsesToBackend();
     }
@@ -98,11 +96,9 @@ const PhasedQuestionnaire = () => {
         navigate("/chatbot", { state: { data } });
       } else {
         console.error("Failed to submit responses");
-        // Handle error (e.g., show error message to user)
       }
     } catch (error) {
       console.error("Error submitting responses:", error);
-      // Handle error (e.g., show error message to user)
     } finally {
       setLoading(false);
     }
