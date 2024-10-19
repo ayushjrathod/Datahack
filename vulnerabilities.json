@@ -1,0 +1,82 @@
+[
+    {
+        "app_name": "Google Chrome",
+        "vulnerability_number": "CVE-2024-7965",
+        "description": "This vulnerability allowed remote attackers to exploit heap corruption via a crafted HTML page.",
+        "versions_prior_to": "128.0.6613.84",
+        "os": "All",
+        "fix": "Upgrade to version 128.0.6613.84 or later."
+    },
+    {
+        "app_name": "Google Chrome",
+        "vulnerability_number": "CVE-2024-5274",
+        "description": "This vulnerability allowed for arbitrary code execution.",
+        "versions_prior_to": "125.0.6422.112/.113 for Windows and Mac, 125.0.6422.112 for Linux.",
+        "os": "Windows, Mac, Linux",
+        "fix": "Upgrade to version 125.0.6422.112/.113 for Windows and Mac, or version 125.0.6422.112 for Linux."
+    },
+    {
+        "app_name": "Google Chrome",
+        "vulnerability_number": "CVE-2024-3832",
+        "description": "These vulnerabilities allowed for remote code execution.",
+        "versions_prior_to": "124.0.6367.60/.61 for Windows and Mac, 124.0.6367.60 for Linux.",
+        "os": "Windows, Mac, Linux",
+        "fix": "Upgrade to the latest version."
+    },
+    {
+        "app_name": "Microsoft Office",
+        "vulnerability_number": "CVE-2024-20677",
+        "description": "Security vulnerability affecting Microsoft Office.",
+        "versions_prior_to": "Office 365 Business Edition Semi-Annual Channel Version 1803 (Build 9126.2382) and earlier.",
+        "os": "Windows, Mac",
+        "fix": "Upgrade to the latest version of Microsoft Office."
+    },
+    {
+        "app_name": "Git",
+        "vulnerability_number": "CVE-2023-25652",
+        "description": "Vulnerability that allows controlled content writes at arbitrary paths.",
+        "versions_prior_to": "2.40.0",
+        "os": "All",
+        "fix": "Upgrade to the latest version of Git."
+    },
+    {
+        "app_name": "Git",
+        "vulnerability_number": "CVE-2023-29007",
+        "description": "Vulnerability that may be used to inject arbitrary configuration settings, leading to code execution.",
+        "versions_prior_to": "2.40.0",
+        "os": "All",
+        "fix": "Upgrade to the latest version of Git."
+    },
+    {
+        "app_name": "Firefox",
+        "vulnerability_number": "CVE-2024-9680",
+        "description": "An attacker could achieve code execution in the content process by exploiting a use-after-free in Animation timelines.",
+        "versions_prior_to": "Firefox 131.0.2, Firefox ESR 128.3.1, Firefox ESR 115.16.1",
+        "os": "All",
+        "fix": "Upgrade to Firefox 131.0.2 or later."
+    },
+    {
+        "app_name": "Jira Software",
+        "vulnerability_number": "Information Disclosure",
+        "description": "Unauthenticated attacker can view sensitive information.",
+        "versions_prior_to": "9.4.0, 9.12.0, 9.15.0 of Jira Core Data Center",
+        "os": "All",
+        "fix": "Upgrade to the latest version of Jira Software."
+    },
+    {
+        "app_name": "Docker",
+        "vulnerability_number": "CVE-2024-8695",
+        "description": "Remote code execution (RCE) vulnerability.",
+        "versions_prior_to": "4.34.2",
+        "os": "All",
+        "fix": "Upgrade to Docker Desktop version 4.34.2 or later."
+    },
+    {
+        "app_name": "Docker",
+        "vulnerability_number": "CVE-2024-23626",
+        "description": "Vulnerability affecting runC and BuildKit.",
+        "versions_prior_to": "1.1.12 for runC and 0.12.5 for BuildKit",
+        "os": "All",
+        "fix": "Update to version 1.1.12 of runC and version 0.12.5 of BuildKit."
+    }
+]

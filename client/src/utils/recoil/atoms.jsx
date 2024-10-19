@@ -27,3 +27,8 @@ export const progressState = atom({
   key: "progressState",
   default: 0,
 });
+
+export const fileDataState = atom({
+  key: "fileDataState",
+  default: null,
+});

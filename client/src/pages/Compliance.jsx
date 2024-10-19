@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Domain = () => {
+const Compliance = () => {
   return (
     <div className="flex flex-row gap-4">
       <Link to="/healthcare">Healthcare</Link>
@@ -11,4 +11,4 @@ const Domain = () => {
   );
 };
 
-export default Domain;
+export default Compliance;

@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Tailwind loader class */
+.loader {
+  border: 8px solid rgba(255, 255, 255, 0.2);
+  border-left-color: #3490dc;
+}
