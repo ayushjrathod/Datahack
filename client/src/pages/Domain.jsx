@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const Domain = () => {
   return (
-    <div>
-      <Link to="/healtcare">Healthcare</Link>
+    <div className="flex flex-row gap-4">
+      <Link to="/healthcare">Healthcare</Link>
       <Link to="/finance">Finance</Link>
       <Link to="/it">Information Technology (IT)</Link>
     </div>
