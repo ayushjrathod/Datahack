@@ -10,21 +10,33 @@ const ChatInput = ({ input, setInput, handleSendMessage, handleKeyPress, inputRe
 
   return (
     <div>
-      <div className="bg-gray-200 rounded-lg flex justify-center w-full">
-        <div className="bg-white w-full border-2 border-gray-500 rounded-lg p-2 m-2 flex flex-col">
-          <div className="flex items-center mb-2">
-            <button onClick={() => triggerFileUpload(".pdf")} className="mr-2 p-1 bg-blue-500 text-white rounded">
-              <i className="bx bxs-file-pdf"></i> PDF
+      <div className="bg-gray-200 rounded-xl flex justify-center w-full">
+        <div className="bg-white w-full border-2 rounded-xl flex flex-col">
+          <div className="flex items-center bg-gray-300 rounded-t-md h-12">
+            <button
+              onClick={() => triggerFileUpload(".pdf")}
+              className="mr-2 ml-4 p-1 w-8 h-8 text-black rounded-md bg-white"
+              title="Upload PDF"
+            >
+              <i className="bx bx-file bx-sm"></i>
             </button>
-            <button onClick={() => triggerFileUpload("image/*")} className="mr-2 p-1 bg-green-500 text-white rounded">
-              <i className="bx bxs-image"></i> Image
+            <button
+              onClick={() => triggerFileUpload("image/*")}
+              className="mr-2 p-1 w-8 h-8 text-black rounded-md bg-white"
+              title="Image"
+            >
+              <i className="bx bx-image bx-sm"></i>
             </button>
-            <button onClick={() => triggerFileUpload(".pptx")} className="mr-2 p-1 bg-orange-500 text-white rounded">
-              <i className="bx bxs-file-ppt"></i> PPTX
+            <button
+              onClick={() => triggerFileUpload(".pptx")}
+              className="mr-2 p-1 w-8 h-8 text-black rounded-md bg-white"
+              title="Upload PPT"
+            >
+              <i className="bx bx-slideshow bx-sm"></i>
             </button>
             <input type="file" ref={fileInputRef} style={{ display: "none" }} onChange={handleFileUpload} />
           </div>
-          <div className="flex items-center">
+          <div className="p-2 flex items-center">
             <input
               ref={inputRef}
               type="text"

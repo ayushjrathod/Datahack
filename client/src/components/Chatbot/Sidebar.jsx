@@ -22,13 +22,9 @@ const Sidebar = ({ chats, chatId, openChat, newChat, drawerOpen }) => (
         </NavItem>
       </div>
       <div className="absolute bottom-1 justify-start flex flex-col">
-        <Link to="/report" className="block py-3 text-gray-600 ">
+        <Link to="/report" className="block py-3 text-gray-600 text-center">
           <i className="bx bxs-report bx-sm"></i>
           <span className="ml-3">Generate Report</span>
-        </Link>
-        <Link to="/risk-score" className="block py-3 text-gray-600">
-          <i className="bx bx-bar-chart-alt-2 bx-sm"></i>
-          <span className="ml-3">Risk Score</span>
         </Link>
       </div>
     </div>

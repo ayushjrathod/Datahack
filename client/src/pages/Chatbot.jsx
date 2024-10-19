@@ -79,7 +79,6 @@ function Chatbot() {
           "Content-Type": "application/json",
         },
       });
-      console.log(response);
       const reader = response.body.getReader();
       const decoder = new TextDecoder();
       let assistantMessage = { role: "assistant", content: [{ text: "" }] };
