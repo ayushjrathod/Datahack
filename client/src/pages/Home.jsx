@@ -1,12 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import UploadDocument from "../components/Home/Uploaddoc";
 
 const Home = () => {
   return (
     <div className="flex flex-row gap-4">
       <Link to="/chatbot">Open Chatbot</Link>
-      <Link to="/upload">Upload Document</Link>
-      <Link to="/select-domain">Questionnaire</Link>
+      <UploadDocument />
+      <Link to="/questionnaire">Questionnaire</Link>
+      <Link to="/compliance-check">Compliance Check</Link>
     </div>
   );
 };
