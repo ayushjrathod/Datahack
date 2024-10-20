@@ -4,22 +4,22 @@ const resources = [
   {
     title: "Network Security Best Practices",
     description: "Learn essential practices for securing your network from cyber threats.",
-    link: "https://example.com/network-security-best-practices",
+    link: "https://www.crowdstrike.com/en-us/cybersecurity-101/cybersecurity/network-security/",
   },
   {
     title: "Incident Response Guide",
     description: "A step-by-step guide to handling security incidents effectively.",
-    link: "https://example.com/incident-response-guide",
+    link: "https://www.crowdstrike.com/en-us/cybersecurity-101/incident-response/",
   },
   {
     title: "Data Encryption Techniques",
     description: "Explore various encryption methods to protect your sensitive data.",
-    link: "https://example.com/data-encryption-techniques",
+    link: "https://www.crowdstrike.com/en-us/cybersecurity-101/data-protection/data-encryption/",
   },
   {
     title: "Cybersecurity Compliance Checklist",
     description: "Ensure your organization complies with industry cybersecurity standards.",
-    link: "https://example.com/compliance-checklist",
+    link: "https://www.comptia.org/content/articles/what-is-cybersecurity-compliance",
   },
 ];
 

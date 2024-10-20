@@ -78,6 +78,7 @@ function Chatbot() {
           "Content-Type": "application/json",
         },
       });
+
       const reader = response.body.getReader();
       const decoder = new TextDecoder();
       let assistantMessage = { role: "assistant", content: [{ text: "" }] };
@@ -89,6 +90,11 @@ function Chatbot() {
         assistantMessage.content[0].text += chunk;
         setMessages((prev) => [...prev.slice(0, -1), assistantMessage]);
         scrollToBottom();
+      }
+
+      const responseData = await response.json();
+      if (responseData.fileUrl) {
+        window.open(responseData.fileUrl, "_blank");
       }
     } catch (error) {
       console.error("Error receiving message:", error);
@@ -130,6 +136,10 @@ function Chatbot() {
             content: [{ text: `Uploaded file: ${file.name}` }],
           };
           setMessages((prev) => [...prev, fileMessage]);
+
+          if (result.fileUrl) {
+            window.open(result.fileUrl, "_blank");
+          }
 
           setInput(`I've just uploaded a file named ${file.name}. Can you analyze it?`);
           handleSendMessage();
