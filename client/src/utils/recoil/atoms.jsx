@@ -8,11 +8,6 @@ export const userState = atom({
   },
 });
 
-export const fileDataState = atom({
-  key: "fileDataState",
-  default: null,
-});
-
 export const currentPhaseState = atom({
   key: "currentPhaseState",
   default: 1,

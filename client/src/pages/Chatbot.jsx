@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { useRecoilState } from "recoil";
 import ChatInput from "../components/Chatbot/ChatInput";
 import ChatMessages from "../components/Chatbot/ChatMessages";
@@ -28,7 +28,6 @@ function Chatbot() {
   setInitialChatMessages(data);
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
-  const { id } = useParams();
 
   const openChat = (id) => {
     setChatId(id);
@@ -162,8 +161,8 @@ function Chatbot() {
       <Sidebar chats={chats} chatId={chatId} openChat={openChat} newChat={newChat} drawerOpen={drawerOpen} />
 
       <main className="p-4 md:ml-64 pt-20 h-screen">
-        <div className="flex flex-col flex-auto flex-shrink-0 rounded-2xl h-full py-2 px-4">
-          <div className="h-full overflow-x-auto mb-6">
+        <div className="flex flex-col flex-auto flex-shrink-0 rounded-2xl h-full py-2">
+          <div className="h-full overflow-x-auto mb-2">
             <ChatMessages messages={messages} />
             <div ref={messagesEndRef} />
           </div>

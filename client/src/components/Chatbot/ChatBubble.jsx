@@ -5,7 +5,7 @@ const ChatBubble = React.memo(({ role, content }) => {
   const messageContent = Array.isArray(content) ? content : [{ text: content }];
 
   return (
-    <div className={`${isUser ? "col-start-6 col-end-13" : "col-start-1 col-end-8"} p-2 rounded-lg`}>
+    <div className={`${isUser ? "col-start-6 col-end-13" : "col-start-1 col-end-8"} rounded-lg`}>
       <div className={`flex ${isUser ? "flex-row-reverse" : "flex-row"} items-center`}>
         {/* <div
           className={`flex items-center justify-center h-10 w-10 rounded-full ${

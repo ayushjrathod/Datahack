@@ -1,10 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useRecoilState } from "recoil";
-import { fileDataState } from "../../utils/recoil/atoms";
 
 const UploadDocument = () => {
-  const [fileData, setFileData] = useRecoilState(fileDataState);
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
 
@@ -22,7 +19,6 @@ const UploadDocument = () => {
         body: formData,
       });
       const data = await response.json();
-      setFileData(data);
       setLoading(false);
       navigate("/chatbot", { state: { data } });
     } catch (error) {
@@ -39,7 +35,7 @@ const UploadDocument = () => {
         <div className="flex items-center text-center gap-2 border-2 p-4 rounded-lg">
           <input type="file" onChange={handleFileChange} className="hidden" id="fileInput" />
           <label htmlFor="fileInput" className="cursor-pointer text-white font-semibold">
-            Select a file to upload
+            Upload Document
           </label>
         </div>
       )}
