@@ -17,6 +17,7 @@ const UploadDocument = () => {
       const response = await fetch("/upload", {
         method: "POST",
         body: formData,
+        mode: "cors",
       });
       const data = await response.json();
       setLoading(false);
