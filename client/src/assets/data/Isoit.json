@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "question_text": "Does your organization have an established ISMS?"
+  },
+  {
+    "id": 2,
+    "question_text": "Is there a documented information security policy?"
+  },
+  {
+    "id": 3,
+    "question_text": "Are risk assessments conducted at regular intervals?"
+  },
+  {
+    "id": 4,
+    "question_text": "Is there a process for evaluating the effectiveness of controls?"
+  },
+  {
+    "id": 5,
+    "question_text": "Is top management involved in the ISMS?"
+  },
+  {
+    "id": 6,
+    "question_text": "Are information security roles and responsibilities defined?"
+  },
+  {
+    "id": 7,
+    "question_text": "Is security awareness training provided to employees?"
+  },
+  {
+    "id": 8,
+    "question_text": "Is there a process for managing security incidents?"
+  },
+  {
+    "id": 9,
+    "question_text": "Are physical security measures in place to protect information assets?"
+  },
+  {
+    "id": 10,
+    "question_text": "Is there a process for managing access control?"
+  },
+  {
+    "id": 11,
+    "question_text": "Does ISO/IEC 27001 apply to all types of organizations?"
+  },
+  {
+    "id": 12,
+    "question_text": "Are all information assets included in the ISMS scope?"
+  },
+  {
+    "id": 13,
+    "question_text": "Is there a documented scope statement for the ISMS?"
+  },
+  {
+    "id": 14,
+    "question_text": "Are third-party vendors assessed for compliance with security policies?"
+  },
+  {
+    "id": 15,
+    "question_text": "Are sensitive data handling procedures defined and documented?"
+  },
+  {
+    "id": 16,
+    "question_text": "Is there a process for internal audits of the ISMS?"
+  },
+  {
+    "id": 17,
+    "question_text": "Are corrective actions taken for identified non-conformities?"
+  },
+  {
+    "id": 18,
+    "question_text": "Is management review conducted at defined intervals?"
+  },
+  {
+    "id": 19,
+    "question_text": "Are records of ISMS activities maintained?"
+  },
+  {
+    "id": 20,
+    "question_text": "Are security controls updated based on the risk assessment findings?"
+  },
+  {
+    "id": 21,
+    "question_text": "Are performance metrics established for the ISMS?"
+  },
+  {
+    "id": 22,
+    "question_text": "Is there a process for reviewing and improving the ISMS?"
+  },
+  {
+    "id": 23,
+    "question_text": "Are training and awareness programs regularly evaluated?"
+  },
+  {
+    "id": 24,
+    "question_text": "Is stakeholder feedback considered in ISMS improvements?"
+  },
+  {
+    "id": 25,
+    "question_text": "Are security incidents analyzed to improve the ISMS?"
+  },
+  {
+    "id": 26,
+    "question_text": "Is there a commitment to continuous improvement in security practices?"
+  },
+  {
+    "id": 27,
+    "question_text": "Is there a process for evaluating the adequacy of information security policies?"
+  },
+  {
+    "id": 28,
+    "question_text": "Are changes in legislation affecting the ISMS monitored?"
+  },
+  {
+    "id": 29,
+    "question_text": "Is there a process for reporting security incidents to authorities?"
+  },
+  {
+    "id": 30,
+    "question_text": "Are ISMS resources allocated appropriately?"
+  },
+  {
+    "id": 31,
+    "question_text": "Is there a process for managing knowledge related to information security?"
+  },
+  {
+    "id": 32,
+    "question_text": "Are there regular assessments of external threats to information security?"
+  },
+  {
+    "id": 33,
+    "question_text": "Are security controls regularly tested and updated?"
+  },
+  {
+    "id": 34,
+    "question_text": "Is there a business continuity plan that aligns with the ISMS?"
+  },
+  {
+    "id": 35,
+    "question_text": "Is there a process for ensuring compliance with security policies?"
+  },
+  {
+    "id": 36,
+    "question_text": "Is there a framework for managing security risks?"
+  },
+  {
+    "id": 37,
+    "question_text": "Are there procedures for handling personal data in compliance with GDPR?"
+  },
+  {
+    "id": 38,
+    "question_text": "Is there a process for reporting breaches of personal data?"
+  },
+  {
+    "id": 39,
+    "question_text": "Is there a process for ensuring data minimization in data handling?"
+  },
+  {
+    "id": 40,
+    "question_text": "Is there a documented policy for the retention and disposal of information?"
+  }
+]
