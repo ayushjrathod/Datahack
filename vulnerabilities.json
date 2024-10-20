@@ -15,7 +15,9 @@
         "os": "Windows, Mac, Linux",
         "fix": "Upgrade to version 125.0.6422.112/.113 for Windows and Mac, or version 125.0.6422.112 for Linux."
     },
+
     {
+        
         "app_name": "Google Chrome",
         "vulnerability_number": "CVE-2024-3832",
         "description": "These vulnerabilities allowed for remote code execution.",

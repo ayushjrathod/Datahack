@@ -63,14 +63,14 @@ function Chatbot() {
 
   const handleSendMessage = async () => {
     if (input.trim() === "") return;
-
+  
     const userMessage = { role: "user", content: [{ text: input }] };
     setMessages((prev) => [...prev, userMessage]);
     setInput("");
-
+  
     try {
       console.log("starting fetch");
-      const response = await fetch(`http://127.0.0.1:8000/ask`, {
+      const response = await fetch(`http://127.0.0.1:8000/chat`, {
         method: "POST",
         body: JSON.stringify({ query: input }),
         mode: "cors",
@@ -78,11 +78,12 @@ function Chatbot() {
           "Content-Type": "application/json",
         },
       });
-
+  
+      // Using a reader for streaming
       const reader = response.body.getReader();
       const decoder = new TextDecoder();
       let assistantMessage = { role: "assistant", content: [{ text: "" }] };
-
+  
       while (true) {
         const { value, done } = await reader.read();
         if (done) break;
@@ -91,11 +92,8 @@ function Chatbot() {
         setMessages((prev) => [...prev.slice(0, -1), assistantMessage]);
         scrollToBottom();
       }
-
-      const responseData = await response.json();
-      if (responseData.fileUrl) {
-        window.open(responseData.fileUrl, "_blank");
-      }
+  
+      // Remove the redundant response.json() call
     } catch (error) {
       console.error("Error receiving message:", error);
       const errorMessage = {
@@ -105,6 +103,7 @@ function Chatbot() {
       setMessages((prev) => [...prev, errorMessage]);
     }
   };
+  
 
   const handleKeyPress = (e) => {
     if (e.key === "Enter" && !e.shiftKey) {
