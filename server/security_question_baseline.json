@@ -1,0 +1,155 @@
+{
+  "questions": [
+    {
+      "id": "remote_work",
+      "answer": "No sufficient Information",
+      "category":"Remote work policy"
+    },
+    {
+      "id": "uefi_bios_protection",
+      "answer": "No sufficient Information",
+      "category": "Security Features"
+    },
+    {
+      "id": "secure_boot",
+      "answer": "No sufficient Information",
+      "category": "Security Features"
+    },
+    {
+      "id": "auto_security_updates",
+      "answer": "No sufficient Information",
+      "category": "Security Features"
+    },
+    {
+      "id": "network_segmentation",
+      "answer": "No sufficient Information",
+      "category": "Network Security Practices"
+    },
+    {
+      "id": "network_access_control",
+      "answer": "No sufficient Information",
+      "category": "Network Security Practices"
+    },
+    {
+      "id": "dmz_implementation",
+      "answer": "No sufficient Information",
+      "category": "Network Security Practices"
+    },
+    {
+      "id": "ddos_protection",
+      "answer": "No sufficient Information",
+      "category": "Network Security Practices"
+    },
+    {
+      "id": "firewall_management",
+      "answer": "No sufficient Information",
+      "category": "Network Security Practices"
+    },
+    {
+      "id": "vpn_policy",
+      "answer": "No sufficient Information",
+      "category": "Network Security Practices"
+    },
+    {
+      "id": "data_handling_policies",
+      "answer": "No sufficient Information",
+      "category": "Data Handling and Encryption"
+    },
+    {
+      "id": "encryption_algorithms",
+      "answer": "No sufficient Information",
+      "category": "Data Handling and Encryption"
+    },
+    {
+      "id": "ssl_tls_implementation",
+      "answer": "No sufficient Information",
+      "category": "Data Handling and Encryption"
+    },
+    {
+      "id": "data_loss_prevention",
+      "answer": "No sufficient Information",
+      "category": "Data Handling and Encryption"
+    },
+    {
+      "id": "password_storing_policies",
+      "answer": "No sufficient Information",
+      "category": "Data Handling and Encryption"
+    },
+    {
+      "id": "data_integrity_practices",
+      "answer": "No sufficient Information",
+      "category": "Data Handling and Encryption"
+    },
+    {
+      "id": "access_control_management",
+      "answer": "No sufficient Information",
+      "category": "Access Control and Security Management"
+    },
+    {
+      "id": "ssh_security",
+      "question": "How is SSH security implemented in your organization?",
+      "answer": "No sufficient Information",
+      "category": "Access Control and Security Management"
+    },
+    {
+      "id": "firewall_configurations",
+      "answer": "No sufficient Information",
+      "category": "Access Control and Security Management"
+    },
+    {
+      "id": "machine_updates",
+      "answer": "No sufficient Information",
+      "category": "Access Control and Security Management"
+    },
+    {
+      "id": "server_logs_storage",
+      "answer": "No sufficient Information",
+      "category": "Access Control and Security Management"
+    },
+    {
+      "id": "social_engineering_training",
+      "answer": "No sufficient Information",
+      "category": "Employee Training and Security Protocols"
+    },
+    {
+      "id": "mfa_implementation",
+      "answer": "No sufficient Information",
+      "category": "Employee Training and Security Protocols"
+    },
+    {
+      "id": "communication_security",
+      "answer": "No sufficient Information",
+      "category": "Employee Training and Security Protocols"
+    },
+    {
+      "id": "least_privilege_principle",
+      "answer": "No sufficient Information",
+      "category": "Employee Training and Security Protocols"
+    },
+    {
+      "id": "incident_response_timeline",
+      "answer": "No sufficient Information",
+      "category": "Incident Response"
+    },
+    {
+      "id": "data_encryption_transmission",
+      "answer": "No sufficient Information",
+      "category": "Data Handling and Encryption"
+    },
+    {
+      "id": "intrusion_detection_prevention",
+      "answer": "No sufficient Information",
+      "category": "Network Security Practices"
+    },
+    {
+      "id": "third_party_risk_management",
+      "answer": "No sufficient Information",
+      "category": "Access Control and Security Management"
+    },
+    {
+      "id": "compliance_regulations",
+      "answer": "No sufficient Information",
+      "category": "Access Control and Security Management"
+    }
+  ]
+}

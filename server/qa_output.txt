@@ -1,0 +1,77 @@
+Topic: uefi_bios_protection
+Question: 
+        system
+        Cutting Knowledge Date: December 2023
+        Today Date: 23 July 2024
+        You are an expert in the cyber security domain, conducting a security analysis for an organization. Generate a question based on uefi_bios_protection to explore a it infra documentation.
+        assistant
+         Here's a question to explore UEFI BIOS protection in an IT infra documentation:
+
+**Security Analysis Question:**
+
+"Does the organization's UEFI BIOS configuration and firmware management practices ensure secure boot, secure firmware updates, and protect against firmware-based attacks, such as firmware rootkits and bootkits, in their critical infrastructure devices, including servers, workstations, and network devices?"
+
+**Specifically, we need to assess:**
+
+1. **Secure Boot**: Is Secure Boot enabled on all critical infrastructure devices? Are Secure Boot policies configured to prevent unauthorized firmware modifications?
+2. **Secure Firmware Updates**: Are firmware updates for critical infrastructure devices reviewed, validated, and tested before deployment to prevent potential security vulnerabilities and firmware-based attacks?
+3. **Firmware Protection**: Are firmware-based attacks, such as firmware rootkits and bootkits, detected and prevented by the organization's UEFI BIOS configuration and firmware management practices?
+4. **UEFI BIOS Configuration**: Are UEFI BIOS configurations standardized and securely managed across the organization, including secure boot settings, firmware update policies, and firmware protection mechanisms?
+5. **Documentation and Compliance**: Are UEFI BIOS configuration and firmware management practices documented, and do they comply with relevant industry standards and regulatory requirements?
+
+**Please provide evidence of the organization's UEFI BIOS protection practices and policies to ensure secure and compliant IT infrastructure operations.**
+Answer: I don't have sufficient information.
+
+Topic: secure_boot
+Question: 
+        system
+        Cutting Knowledge Date: December 2023
+        Today Date: 23 July 2024
+        You are an expert in the cyber security domain, conducting a security analysis for an organization. Generate a question based on secure_boot to explore a it infra documentation.
+        assistant
+         Here's a question to explore secure boot in the context of an organization's IT infrastructure documentation:
+
+**Question:** What secure boot protocols and procedures are in place to ensure the integrity and authenticity of firmware updates on our organization's servers and workstations, particularly in scenarios where devices are being deployed or repurposed from other organizations or individuals?
+
+**Specifically:**
+
+1. Are secure boot protocols enabled on all devices, including servers, workstations, and IoT devices?
+2. Are firmware updates validated and signed by trusted authorities before being deployed on production devices?
+3. Are secure boot mechanisms configured to prevent tampering with or bypassing the boot process?
+4. Are secure boot protocols integrated with existing endpoint management systems to ensure seamless monitoring and enforcement?
+5. Are there documented procedures for handling secure boot-related incidents, such as firmware tampering or boot process disruption?
+6. Are secure boot protocols audited and reviewed regularly to ensure compliance with organizational security policies and industry standards?
+
+**Please provide documentation and evidence of the following:**
+
+* Secure boot configuration settings for devices
+* Firmware update validation and signing processes
+* Secure boot-related incident response procedures
+* Regular security audits and reviews of secure boot protocols
+Answer: I don't have sufficient information.
+
+Topic: auto_security_updates
+Question: 
+        system
+        Cutting Knowledge Date: December 2023
+        Today Date: 23 July 2024
+        You are an expert in the cyber security domain, conducting a security analysis for an organization. Generate a question based on auto_security_updates to explore a it infra documentation.
+        assistant
+         Here's a question to explore auto_security_updates in the context of IT infrastructure documentation:
+
+**Security Analysis Question:**
+
+What is the current process and procedure for implementing and deploying auto_security_updates across all systems and applications in the organization's IT infrastructure, and how does it ensure the integrity and security of the system and data in the event of any potential security vulnerabilities or patches?
+
+**Specifically, please provide documentation on:**
+
+1. **Auto-update triggers**: How are auto_security_updates triggered (e.g., daily, weekly, monthly)?
+2. **Update inventory management**: How are all systems and applications inventoried to ensure that all necessary updates are applied?
+3. **Update prioritization**: What is the prioritization process for applying updates, considering factors like security risk, business impact, and system downtime?
+4. **Testing and validation**: What testing and validation procedures are in place to ensure that updates do not introduce any new security vulnerabilities or compatibility issues?
+5. **Rollback procedures**: What are the procedures for rolling back updates in case of any issues or errors?
+6. **Documentation and logging**: How are auto_security_updates and their outcomes documented and logged for future reference and auditing purposes?
+
+**Please provide the current documentation and procedures for the above processes and procedures.**
+Answer: I don't have sufficient information.
+
